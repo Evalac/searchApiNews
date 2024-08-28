@@ -2,6 +2,12 @@ const API_KEY = `59ea23f33abe45d5ae23b6a2a5f58a36`;
 const BASE_URL = `https://newsapi.org/v2`;
 const CORS_PROXY = 'https://corsproxy.io/?';
 
+// const URLPROXY =
+//   'https://corsproxy.io/?' +
+//   encodeURIComponent(
+//     `${BASE_URL}/everything?q=${this.searchForm}&language=en&pageSize=4&page=${this.page}`
+//   );
+
 class NewsApiService {
   constructor() {
     this.searchForm = '';
@@ -43,3 +49,9 @@ class NewsApiService {
 }
 
 export { NewsApiService };
+
+fetch(
+  `https://api.allorigins.win/get?url=${encodeURIComponent(
+    'https://wikipedia.org'
+  )}`
+);
