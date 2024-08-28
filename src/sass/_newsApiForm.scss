@@ -1,0 +1,108 @@
+.container {
+  text-align: center;
+}
+
+.search-form {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.search-input {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px 0 0 5px;
+  width: 300px;
+}
+
+.search-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-left: none;
+  border-radius: 0 5px 5px 0;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.search-button:hover {
+  background-color: #0056b3;
+}
+
+/* Контейнер для всех статей */
+.articles-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 колонки с одинаковой шириной */
+  gap: 16px; /* Отступы между карточками */
+  padding: 16px; /* Внутренние отступы у контейнера */
+}
+
+/* Стили для каждой статьи */
+.news-article {
+  border: 1px solid #e0e0e0; /* Границы карточки */
+  border-radius: 8px; /* Закругленные углы */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Тень для объема */
+  padding: 16px; /* Внутренние отступы */
+  background-color: #ffffff; /* Фон карточки */
+}
+
+.article-header img {
+  max-width: 100%; /* Картинка занимает всю ширину контейнера */
+  border-radius: 8px; /* Закругленные углы изображения */
+  margin-bottom: 16px; /* Отступ снизу */
+}
+
+.article-title a {
+  text-decoration: none; /* Убираем подчеркивание ссылки */
+  color: #333; /* Цвет текста */
+  font-size: 1.25rem; /* Размер шрифта заголовка */
+  font-weight: bold; /* Полужирный текст */
+}
+
+.article-title a:hover {
+  color: #007bff; /* Цвет текста при наведении */
+}
+
+/* Информация об авторе и дате */
+.article-author,
+.article-date {
+  font-size: 0.875rem; /* Размер шрифта */
+  color: #777; /* Цвет текста */
+  margin: 0; /* Убираем отступы */
+  line-height: 1.6; /* Межстрочный интервал */
+}
+
+/* Описание статьи */
+.article-description {
+  font-size: 1rem; /* Размер шрифта описания */
+  color: #555; /* Цвет текста */
+  margin-bottom: 16px; /* Отступ снизу */
+}
+
+/* Основной контент статьи */
+.article-content {
+  font-size: 0.875rem; /* Размер шрифта */
+  color: #333; /* Цвет текста */
+  line-height: 1.8; /* Межстрочный интервал */
+}
+
+.article-content p {
+  margin-bottom: 16px; /* Отступ снизу для абзацев */
+}
+
+/* Адаптивность для экрана шириной менее 1024px (например, планшеты) */
+@media (max-width: 1024px) {
+  .articles-container {
+    grid-template-columns: repeat(2, 1fr); /* 2 колонки */
+  }
+}
+
+/* Адаптивность для экрана шириной менее 768px (например, мобильные устройства) */
+@media (max-width: 768px) {
+  .articles-container {
+    grid-template-columns: 1fr; /* 1 колонка */
+  }
+}
