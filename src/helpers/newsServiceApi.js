@@ -15,11 +15,8 @@ class NewsApiService {
         Authorization: API_KEY,
       },
     };
-    const ENCODE = encodeURIComponent(
-      `${BASE_URL}/everything?q=${this.searchForm}&language=en&pageSize=4&page=${this.page}`
-    );
-    // const url = `${CORS_PROXY}${BASE_URL}/everything?q=${this.searchForm}&language=en&pageSize=4&page=${this.page}`;
-    const url = `${CORS_PROXY}+${ENCODE}`;
+
+    const url = `${BASE_URL}/everything?q=${this.searchForm}&language=en&pageSize=4&page=${this.page}`;
     return fetch(url, options)
       .then(responce => responce.json())
       .then(({ articles }) => {
