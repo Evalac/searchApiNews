@@ -1,6 +1,6 @@
 const API_KEY = `59ea23f33abe45d5ae23b6a2a5f58a36`;
 const BASE_URL = `https://newsapi.org/v2`;
-const CORS_PROXY = 'https://cors-anywhere.herokuapp.com/';
+const CORS_PROXY = 'https://corsproxy.io/?';
 
 class NewsApiService {
   constructor() {
